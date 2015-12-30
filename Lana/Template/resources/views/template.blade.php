@@ -3,9 +3,9 @@
 <head>
 	<meta charset="UTF-8">
 	<title>
-		@section("titleHead")
-			Default Template
-		@stop
+	@section("title-website")
+		Framework Lanjutan
+	@show
 	</title>
 	@section("head")
 	<script type="text/javascript" src="{{ asset('lana-template/jquery.min.js') }}"></script>
@@ -23,7 +23,7 @@
 
 	<div class="container">
 		@section("header")
-			<h1>Title Header Here...</h1>
+			<h1>Perpustakaan Universitas Antah-berantah</h1>
 		@show
 	</div>
 
@@ -40,11 +40,10 @@
 	<div class="container">
 		<div class="text-center">
 			@section("footer")
-				Footer Here....
+				Copyright &copy; {{ date("Y") }} by Slamet Maulana Yusuf. All Right Reserved.
 			@show	
 		</div>
-		
 	</div>
-	
 </body>
 </html>
+

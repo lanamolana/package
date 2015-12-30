@@ -1,17 +1,29 @@
 @extends("LanaTemplate::one-column")
 
-@section("header")
-    <h1>Demo Package</h1>
-@stop
+@section('content')
+<br>
+<br>
+<div class="container">
+		<div class="col-md-10 col-md-offset-1">
+			<div class="panel panel-success">
+				<div class="panel-heading"><strong>Welcome!</strong></div>
 
-@section("content")
-    <h2>Home</h2>
-    <hr>
-@stop
-
-@section("footer")
-    Copyright &copy; {{ date("Y") }} by Slamet Maulana Yusuf. All Right Reserved.
-@stop
+				<div class="panel-body">
+				Skema proses peminjaman buku : <br>
+				1). Registrasi Member <a href="mhs/register">disini</a>	<br>
+				2). Lihat Daftar Buku <a href="/listbooks">disini</a>	<br>
+				3). Contact Petugas <a href="/contact">disini</a>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				</div>
+			</div>
+		</div>
+</div>
+@endsection
 
 
 

@@ -1,15 +1,25 @@
 @extends("LanaTemplate::one-column")
 
-@section("header")
-    <h1>Demo Package</h1>
-@stop
-
 @section("content")
 
-<h2>Form Login</h2>
+        @yield("content")
 
-<hr>
-
+<div class="container">
+    <div class="col-md-12">
+<br>
+<h2>Form Login</h2>  
+<br>
+@if (count($errors) > 0)
+                        <div class="alert alert-danger">
+                            <strong>Whoops!</strong> There were some problems with your input.<br><br>
+                            <ul>
+                                @foreach ($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    @endif
+<br>
 <form action="{{ url('/proses-login') }}" method="post" class="form-horizontal">
     
      <div class="form-group">
@@ -30,13 +40,10 @@
     <hr>
     <div class="form-group">
         <div class="col-xs-offset-1 col-xs-10">
-            <button type="submit" class="btn btn-primary">Login</button>
+            <button type="submit" class="btn btn-primary">
+                <span class="glyphicon glyphicon-log-in" aria-hidden="true"> Login</span>
+            </button>
         </div>
     </div>
 </form>
-
-@stop
-
-@section("footer")
-    Copyright &copy; {{ date("Y") }} by Slamet Maulana Yusuf. All Right Reserved.
 @stop
