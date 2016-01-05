@@ -14,13 +14,19 @@
         }
     ],
     "require": {
-        "php": ">=5.5.9",
-        "laravel/framework": "5.1.*",
-        "lanamolana/package": "1.0.*"
+        "php": ">=5.5.9"
     },
     "autoload": {
         "psr-4": {
-        "lanamolana\\" : "package/"
+        "Lana\\" : "package/"
+        }
+    },
+    "require-dev": {
+        "lanamolana/package": "1.0.*"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "2.0.x-dev"
         }
     }
 }
